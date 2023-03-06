@@ -32,6 +32,7 @@
 
 #include <stdint.h>
 #include <stddef.h>
+#include "stm32f3xx_hal.h"
 
 /* *INDENT-OFF* */
 #ifdef __cplusplus
@@ -187,7 +188,10 @@
  * This context is passed into the network interface functions.
  */
 /* @[define_networkcontext] */
-struct NetworkContext;
+struct NetworkContext{
+	 UART_HandleTypeDef *uart_handle_ptr;
+	 DMA_HandleTypeDef  *dma_handle_prt;
+};
 typedef struct NetworkContext NetworkContext_t;
 /* @[define_networkcontext] */
 
