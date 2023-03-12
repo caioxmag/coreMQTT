@@ -165,7 +165,7 @@
  *
  */
 #ifndef MQTT_RECV_POLLING_TIMEOUT_MS
-    #define MQTT_RECV_POLLING_TIMEOUT_MS    ( 10U )
+    #define MQTT_RECV_POLLING_TIMEOUT_MS    ( 5000U )
 #endif
 
 /**
